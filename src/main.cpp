@@ -18,7 +18,9 @@ int main(int argc, char const *argv[])
 {
     /* code */
     double angle = 0.55; //radians
+    // Test of Factorial Function
     std::cout << ve6ji::Fac(23) << std::endl;
+    // Test of Power Function
     std::cout << ve6ji::Pow(1.283,23) << std::endl;
     ve6ji::Sin(angle);
     std::cout.precision(12);
@@ -28,7 +30,7 @@ int main(int argc, char const *argv[])
 
 double ve6ji::Sin(double x)
 {
-    // Calculate the Sine of an angle using taylor approx
+    // Calculate the Sine of an angle using taylor series
     return x - (ve6ji::Pow(x, 3) / ve6ji::Fac(3)) + (ve6ji::Pow(x, 5) / ve6ji::Fac(5)) - (ve6ji::Pow(x, 7) / ve6ji::Fac(7)) 
     + (ve6ji::Pow(x, 9) / ve6ji::Fac(9)) - (ve6ji::Pow(x, 11) / ve6ji::Fac(11)) + (ve6ji::Pow(x, 13) / ve6ji::Fac(13))
     - (ve6ji::Pow(x, 15) / ve6ji::Fac(15)) + (ve6ji::Pow(x, 17) / ve6ji::Fac(17)) - (ve6ji::Pow(x, 19) / ve6ji::Fac(19))
